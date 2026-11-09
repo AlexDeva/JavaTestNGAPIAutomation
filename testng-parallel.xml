@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Automation Suite" parallel="methods" thread-count="5" data-provider-thread-count="5">
+    <!-- Five workers allow independent tests to run concurrently; shared test state must be thread-safe. -->
+    <listeners>
+        <listener class-name="com.example.apiautomation.reporting.TestListener"/>
+    </listeners>
+    <test name="Resource API tests">
+        <classes>
+            <class name="com.example.apiautomation.tests.ResourceApiTests"/>
+        </classes>
+    </test>
+</suite>
